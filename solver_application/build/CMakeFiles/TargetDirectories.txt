@@ -1,0 +1,6 @@
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/formatter_lib.dir
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/solver.dir
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/formatter_ex_lib.dir
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/solver_app.dir
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/edit_cache.dir
+/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_application/build/CMakeFiles/rebuild_cache.dir

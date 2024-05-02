@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libsolver.a CMakeFiles/solver.dir/Users/macbook/VakulinGrigory/workspace/projects/lab03/solver_lib/solver.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libsolver.a
