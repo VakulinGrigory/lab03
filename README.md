@@ -174,7 +174,7 @@ $ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.4)
 project(formatter_lib)
 add_library(formatter STATIC formatter.h formatter.cpp)
 ```
@@ -214,7 +214,7 @@ $ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.4)
 project(formatter_ex)
 add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
 
@@ -259,7 +259,7 @@ $ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.4)
 project(Hello_World)
 add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
 
@@ -301,7 +301,7 @@ $ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.4)
 project(Solver)
 add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
 
