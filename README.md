@@ -195,6 +195,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
+$ git push origin master
 ```
 
 ### Задание 2
@@ -238,6 +239,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
+$ git push origin master
 ```
 
 ### Задание 3
@@ -285,6 +287,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
+$ git push origin master
 ```
 
 #### Solver
@@ -318,28 +321,35 @@ $ cd ..
 $ cd solver_lib
 ```
 5. Исправим файл solver.cpp, добавив строку #include <cmath>, убрав std в 15 и 16 строках и заменив фигурные скобки на круглые в 12 строке.
-6. Вернемся в дирректорию solver_application:
-  ```sh
+6. Закоммитьтим и запушим изменения:
+```sh
+$ git add solver.cpp
+$ git commit -m"fixed solver.cpp"
+$ git push origin master
+```
+7. Вернемся в дирректорию solver_application:
+```sh
 $ cd ..
 $ cd solver_application
 ```
-7. Создадим дирректорию сборки и перейдем в неё:
+8. Создадим дирректорию сборки и перейдем в неё:
 ```sh
 $ mkdir build
 $ cd build
 ```
-8. Настроим и соберем проект:
+9. Настроим и соберем проект:
 ```sh
 $ cmake ..
 $ cmake --build . --config Release
 ```
-9. Закоммитьтим и запушим изменения:
+10. Закоммитьтим и запушим изменения:
 ```sh
 $ cd ..
 $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
+$ git push origin master
 ```
 
 **Удачной стажировки!**
