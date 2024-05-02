@@ -195,7 +195,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
-$ git push origin master
+$ git push origin main
 ```
 
 ### Задание 2
@@ -239,7 +239,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
-$ git push origin master
+$ git push origin main
 ```
 
 ### Задание 3
@@ -287,7 +287,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
-$ git push origin master
+$ git push origin main
 ```
 
 #### Solver
@@ -325,7 +325,7 @@ $ cd solver_lib
 ```sh
 $ git add solver.cpp
 $ git commit -m"fixed solver.cpp"
-$ git push origin master
+$ git push origin main
 ```
 7. Вернемся в дирректорию solver_application:
 ```sh
@@ -349,7 +349,7 @@ $ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
-$ git push origin master
+$ git push origin main
 ```
 
 **Удачной стажировки!**
