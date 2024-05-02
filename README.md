@@ -170,7 +170,7 @@ $ cd formatter_lib
 ```
 2. Создадим файл CMakeList.txt:
 ```sh
-$ touch CMakeLists.txt
+$ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
@@ -191,7 +191,7 @@ $ cmake --build . --config Release
 6. Закоммитьтим и запушим изменения:
 ```sh
 $ cd ..
-$ git add CMakeLists.txt
+$ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
@@ -209,7 +209,7 @@ $ cd formatter_ex_lib
 ```
 2. Создадим файл CMakeList.txt:
 ```sh
-$ touch CMakeLists.txt
+$ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
@@ -234,7 +234,7 @@ $ cmake --build . --config Release
 6. Закоммитьтим и запушим изменения:
 ```sh
 $ cd ..
-$ git add CMakeLists.txt
+$ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
@@ -253,7 +253,7 @@ $ cd hello_world_application
 ```
 2. Создадим файл CMakeList.txt:
 ```sh
-$ touch CMakeLists.txt
+$ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
@@ -281,7 +281,7 @@ $ cmake --build . --config Release
 6. Закоммитьтим и запушим изменения:
 ```sh
 $ cd ..
-$ git add CMakeLists.txt
+$ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
@@ -294,7 +294,7 @@ $ cd solver_application
 ```
 2. Создадим файл CMakeList.txt:
 ```sh
-$ touch CMakeLists.txt
+$ touch CMakeList.txt
 ```
 3. Запишем  следующее содержимое в файл CMakeList.txt:
 ```sh
@@ -336,7 +336,7 @@ $ cmake --build . --config Release
 9. Закоммитьтим и запушим изменения:
 ```sh
 $ cd ..
-$ git add CMakeLists.txt
+$ git add CMakeList.txt
 $ git commit -m"created CMakeList.txt"
 $ git add build/
 $ git commit -m"created build folder"
