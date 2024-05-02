@@ -164,6 +164,38 @@ $ gist REPORT.md
 В этой директории находятся файлы для статической библиотеки *formatter*.
 Создайте `CMakeList.txt` в директории [formatter_lib](formatter_lib),
 с помощью которого можно будет собирать статическую библиотеку *formatter*.
+1. Перейдём в дирректорию formatter_lib:
+```sh
+$ cd formatter_lib
+```
+2. Создадим файл CMakeList.txt:
+```sh
+$ touch CMakeLists.txt
+```
+3. Запишем  следующее содержимое в файл CMakeList.txt:
+```sh
+cmake_minimum_required(VERSION 3.2)
+project(formatter_lib)
+add_library(formatter STATIC formatter.h formatter.cpp)
+```
+4. Создадим дирректорию сборки и перейдем в неё:
+```sh
+$ mkdir build
+$ cd build
+```
+5. Настроим и соберем проект:
+```sh
+$ cmake ..
+$ cmake --build . --config Release
+```
+6. Закоммитьтим и запушим изменения:
+```sh
+$ cd ..
+$ git add CMakeLists.txt
+$ git commit -m"created CMakeList.txt"
+$ git add build/
+$ git commit -m"created build folder"
+```
 
 ### Задание 2
 У компании "Formatter Inc." есть перспективная библиотека,
@@ -171,6 +203,42 @@ $ gist REPORT.md
 навыком созданием `CMakeList.txt` для статической библиотеки *formatter*, ваш 
 руководитель поручает заняться созданием `CMakeList.txt` для библиотеки 
 *formatter_ex*, которая в свою очередь использует библиотеку *formatter*.
+1. Перейдём в дирректорию formatter_ex_lib:
+```sh
+$ cd formatter_ex_lib
+```
+2. Создадим файл CMakeList.txt:
+```sh
+$ touch CMakeLists.txt
+```
+3. Запишем  следующее содержимое в файл CMakeList.txt:
+```sh
+cmake_minimum_required(VERSION 3.2)
+project(formatter_ex)
+add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
+
+target_include_directories(formatter_lib PUBLIC ../formatter_lib)
+add_library(formatter_ex_lib STATIC formatter_ex.h formatter_ex.cpp)
+target_link_libraries(formatter_ex_lib formatter_lib)
+```
+4. Создадим дирректорию сборки и перейдем в неё:
+```sh
+$ mkdir build
+$ cd build
+```
+5. Настроим и соберем проект:
+```sh
+$ cmake ..
+$ cmake --build . --config Release
+```
+6. Закоммитьтим и запушим изменения:
+```sh
+$ cd ..
+$ git add CMakeLists.txt
+$ git commit -m"created CMakeList.txt"
+$ git add build/
+$ git commit -m"created build folder"
+```
 
 ### Задание 3
 Конечно же ваша компания предоставляет примеры использования своих библиотек.
@@ -178,6 +246,101 @@ $ gist REPORT.md
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
+# Hello world
+1. Перейдём в дирректорию hello_world_application:
+```sh
+$ cd hello_world_application
+```
+2. Создадим файл CMakeList.txt:
+```sh
+$ touch CMakeLists.txt
+```
+3. Запишем  следующее содержимое в файл CMakeList.txt:
+```sh
+cmake_minimum_required(VERSION 3.2)
+project(Hello_World)
+add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
+
+target_include_directories(formatter_lib PUBLIC ../formatter_lib)
+add_library(formatter_ex_lib STATIC ../formatter_ex_lib/formatter_ex.cpp)
+target_include_directories(formatter_ex_lib PUBLIC ../formatter_ex_lib)
+add_executable(hello_world hello_world.cpp)
+target_link_libraries(formatter_ex_lib formatter_lib)
+target_link_libraries(hello_world formatter_ex_lib)
+```
+4. Создадим дирректорию сборки и перейдем в неё:
+```sh
+$ mkdir build
+$ cd build
+```
+5. Настроим и соберем проект:
+```sh
+$ cmake ..
+$ cmake --build . --config Release
+```
+6. Закоммитьтим и запушим изменения:
+```sh
+$ cd ..
+$ git add CMakeLists.txt
+$ git commit -m"created CMakeList.txt"
+$ git add build/
+$ git commit -m"created build folder"
+```
+
+# Solver
+1. Перейдём в дирректорию solver_application:
+```sh
+$ cd solver_application
+```
+2. Создадим файл CMakeList.txt:
+```sh
+$ touch CMakeLists.txt
+```
+3. Запишем  следующее содержимое в файл CMakeList.txt:
+```sh
+cmake_minimum_required(VERSION 3.2)
+project(Solver)
+add_library(formatter_lib STATIC ../formatter_lib/formatter.cpp)
+
+target_include_directories(formatter_lib PUBLIC ../formatter_lib)
+add_library(solver STATIC ../solver_lib/solver.cpp)
+target_include_directories(solver PUBLIC ../solver_lib)
+add_library(formatter_ex_lib STATIC ../formatter_ex_lib/formatter_ex.cpp)
+target_include_directories(formatter_ex_lib PUBLIC ../formatter_ex_lib)
+add_executable(solver_app equation.cpp)
+target_link_libraries(formatter_ex_lib formatter_lib)
+target_link_libraries(solver_app formatter_ex_lib)
+target_link_libraries(solver_app solver)
+```
+4. Перейдём в дирректорию solver_lib:
+```sh
+$ cd ..
+$ cd solver_lib
+```
+5. Исправим файл solver.cpp, добавив строку #include <cmath>, убрав std в 15 и 16 строках и заменив фигурные скобки на круглые в 12 строке.
+6. Вернемся в дирректорию solver_application:
+  ```sh
+$ cd ..
+$ cd solver_application
+```
+7. Создадим дирректорию сборки и перейдем в неё:
+```sh
+$ mkdir build
+$ cd build
+```
+8. Настроим и соберем проект:
+```sh
+$ cmake ..
+$ cmake --build . --config Release
+```
+9. Закоммитьтим и запушим изменения:
+```sh
+$ cd ..
+$ git add CMakeLists.txt
+$ git commit -m"created CMakeList.txt"
+$ git add build/
+$ git commit -m"created build folder"
+```
 
 **Удачной стажировки!**
 
