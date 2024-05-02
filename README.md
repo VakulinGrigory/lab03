@@ -246,7 +246,7 @@ $ git commit -m"created build folder"
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
-# Hello world
+#### Hello world
 1. Перейдём в дирректорию hello_world_application:
 ```sh
 $ cd hello_world_application
@@ -287,7 +287,7 @@ $ git add build/
 $ git commit -m"created build folder"
 ```
 
-# Solver
+#### Solver
 1. Перейдём в дирректорию solver_application:
 ```sh
 $ cd solver_application
